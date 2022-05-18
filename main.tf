@@ -36,7 +36,7 @@ module "terraform-intersight-iks" {
   cluster = {
     name                = var.cluster_name
     ## Tries to deploy before profile is complete - need to deploy twice ...
-    action              = "Undeploy" # Unassign, Deploy, Undeploy
+    action              = "Unassign" # Unassign, Deploy, Undeploy
     ## Note: You cannot assign the cluster action as "Deploy" and "wait_for_completion" as TRUE at the same time.
     wait_for_completion = false
     worker_nodes        = var.worker_nodes
@@ -56,7 +56,7 @@ module "terraform-intersight-iks" {
   # Associated Policies
   ip_pool = {
     use_existing = true
-    name         = "tf-iks-ftd-gw"
+    name         = "tf-iks-dmz-gw"
   }
 
   sysconfig = {
@@ -89,7 +89,7 @@ module "terraform-intersight-iks" {
 
   infraConfigPolicy = {
     use_existing = true
-    policyName   = "cpoc-hx"  ## Note: Manual policy - not in TF common policy set
+    policyName   = "tf-iks-aci-dmz" #"cpoc-hx"  ## Note: Manual policy - not in TF common policy set
   }
 
   addons = [
