@@ -4,4 +4,4 @@ cluster_name      = "tf-iks-cpoc-demo-1"
 worker_nodes      = 4
 worker_nodes_max  = 5
 control_nodes     = 1
-load_balancer_ips = 5
+load_balancer_ips = 3
