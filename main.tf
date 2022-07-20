@@ -72,7 +72,7 @@ module "terraform-intersight-iks" {
 
   versionPolicy = {
     useExisting = true
-    policyName  = "tf-iks-1-20-5" #"tf-iks-ob-latest"
+    policyName  = "tf-iks-1-20-14" #"tf-iks-ob-latest"
   }
 
   tr_policy = {
