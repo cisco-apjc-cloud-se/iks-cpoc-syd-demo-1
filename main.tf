@@ -101,6 +101,6 @@ module "terraform-intersight-iks" {
 
   instance_type = {
     use_existing = true
-    name = "tf-iks-10C-64G-60G"
+    name = "tf-iks-8C-48G-60G" # "tf-iks-10C-64G-60G"
   }
 }
